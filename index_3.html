@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Avencrest Wealth Management — We work with individuals, families, and institutions to manage wealth and plan for the future.">
+<title>Avencrest Wealth Management</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEK0lEQVR42r2XTWgVVxTHf+fOTGbeeypqobb15cOPaqE1lpaYGD/ajUHoUgQT+yGhFNx0k0jdFIQutd1bSmmhIpSWdtGNQhdVsX5Q6MIilaLBpFIFETXvzcx7c+/pYmJM8yHvxSYXZjX33vO//9+dM+cIAGt69gvmCLgOwAOEhRkKWDAjijvCjQsnhPbufeJ5J/PXjkUZYvJw1vaLdPSMYkwZtRbEWxwFahHPw7kxg1DOT75YwcljqQOhbJ5qGwHzlLdl/gIEXAa2rogssgAjoDVl3SqPTW0BLtV5O2GewgCGdhX5+K0SYYuAm9+327QAz4CNlT3dEa+2BpRXehzYWcCmijELLMAIZDWl7XmPD3YUGa8pD2Jl/5aITWsDsqR5EWY+/If7ShRaBE8g9AWnwlBfkTAUsM2hME1ZX1X2dhfo6gjInDJy13LlVh0BNq7yObCjeRSmYetTpWO1z/vbCzxMlcAIx05X+OSnCplTxlNloKvAK02iaGyagjHCcF+RFk9YEgonLsVcvZlx567l+NmYJaHgVBne1RwK0+it37c14vX2AKfKtdsZX56J8VuEoCB8dyHm8kgdY4QNzzWHwjRi/bpWn8FtufUicPRUhbSmZA7qmaKS40jrSiVVBrqihlGYJyUaFDwvt943sDQUvrmY8MdIBgKdrT6vtQeoKjf/sXx+tjqBgoZRzCnATFjfvzVPOApcuZXx9bkYEwqBJwz3lTi8u0ToCyYUvr+ccPFGcyjMk6x/sc1nsLfAeKqowrFTFeoWXKq8vS1i/bMe5RUeg28UcKmCCJ+erpA0gcLMZb3v5yc0BpaEwlfnY/4czQDY2Orzbk8u7GGq9HdFdK4NUKeM3rYcP9M4CjOX9ft7IzrLPiD8PlrnxPkELxQCA0N9JXxPUH0se2hXkTAQvFD44XLCr9freI9QbJ8bhZkePEuUDe0+702cMLPK0VNVrIJNlIHeiM1ln/Ek/wUbgUqqbHzEPFEwwmenK1RrOYr+LREvr5kdhZlqvVoIQ+Hw7hKBLyyLhC/OxVy/lYEqL7X7DPYWGU+VFp9JAS0+jKfKO90FNq/PUYzdyVEsjQRjhI92lyhEgk5DYaaWV66u7OmKaHvG437s+OVajW8vJZhQCAPh4JtF6jZPu3FNqU55KqlSrSsHdxYohvlX8eNvCT9frfEwdryw3LC3O8JNq6BE1vToVEtWFAXr8gz4IFGsze3xPVhZNNRtbr3OcnmdQuAJ92JHPZvIIwaWFR7vea+q0+rKaQLUTmlLhEm1qoBr/Bc3uY68FckZz6y9/Rlrp/ZF+vikIiB+g1W//teZyXU60zl/tt5pxqxZNm6qDdGFKMv/p2FQxvJeTe3ihVWLGFDGjKoemuiWFq81m4ilqoc87v99heWr/xKkE3TZo3uzsO25XFfch4xcPPkvJxbntoABnewAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACAElEQVR42pWTTWtTURCGn5mb3PTmXlurCwXpIqj1qyjooiktIn5hwUJ3gou6KgW7ErFgEaxF/QP+DaWIZFEEu9GFCLrzA12460olNmluknvPuEgbqUlRZ3MOzDlnnve8M6KF4ryJzGMWAMq/hUOkJmYPRQrDCaIeZh2nRFprl1QraS5VkG0vuwRc09oPbQkzQLyuyKrgYuNUIcPIoI+LDd1GXKajMkAKfk64dTGkJytc/dokTkG0U452q57GxvSZPHv7lN5AuH4+j6sbKn8hUIUkNob2Z5k5HXB7qcJ6w3h0ZQcvPjZ4+7mJFwjOdSFoo/vCwkTEyy9NSm9iVt7FLH9osDAREQSCpWz5VP0TfeZsnoF+5c7jNYYP+Ywey3HvyRq7Q2X2XKcUbaPXjOMHskyPBSyWqvxYc8yNh8yNh1TrxsKzCtdGAk4ezJLUfruim37n88KDyYiVTw1Kr2rcuByyb6eyp1e5ORHx/HXM8vsG9ycjolBxSUuKCmCJMTUakPGEu0sVhgZ9Lh3NsVp2rJYdFw77nDjis/i0AsDUWIAlhgAihaIB7AqV9bpRqxt9keAJONvEhNSgXDF6ckKYE75X3VYbv/10oKAZKFcNbNMa2nvNQNw04rohXrsPLEXUU8/aLS5KZ/9bK6cCeGAbw+Rp/0CCSHGDRv5jnNcFFn8B4ObEyczOgRkAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<meta name="theme-color" content="#0c1d38">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:    #0c1d38;
+  --ink2:   #0f2242;
+  --ink3:   #132a52;
+  --navy-l: #1a3660;
+  --gold:   #c4a55a;
+  --gold-l: #d9bc78;
+  --gold-s: #edd89a;
+  --text:   #edf2ff;
+  --muted:  rgba(220,228,255,.52);
+  --dim:    rgba(220,228,255,.24);
+  --border: rgba(255,255,255,.1);
+  --bglow:  rgba(196,165,90,.3);
+  --ff-d:   'Avenir Next','Avenir','Nunito',-apple-system,BlinkMacSystemFont,sans-serif;
+  --ff-b:   'Avenir Next','Avenir','Nunito',-apple-system,BlinkMacSystemFont,sans-serif;
+  --ease:   cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+body{background:var(--ink);color:var(--text);font-family:var(--ff-b);overflow-x:hidden;cursor:none}
+
+/* ── CURSOR ──────────────────────────────── */
+#cur{position:fixed;top:0;left:0;width:8px;height:8px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen}
+#cur-r{position:fixed;top:0;left:0;width:32px;height:32px;border:1px solid rgba(184,154,82,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease),border-color .25s}
+body:has(a:hover) #cur-r,body:has(button:hover) #cur-r{width:52px;height:52px;border-color:var(--gold)}
+
+/* ── NOISE ───────────────────────────────── */
+#noise{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.02;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px}
+
+/* ── NAV ─────────────────────────────────── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3.5rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s,backdrop-filter .4s}
+nav.scrolled{background:rgba(8,9,14,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;text-decoration:none}
+.nav-logo svg{flex-shrink:0}
+.nav-logo-img{height:36px;width:auto;display:block}
+.nav-wordmark{font-family:var(--ff-d);font-size:1rem;font-weight:800;letter-spacing:.08em;color:var(--text)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{white-space:nowrap;font-size:.78rem;font-weight:400;letter-spacing:.06em;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{font-family:var(--ff-b);font-size:.78rem;font-weight:500;color:var(--gold);border:1px solid var(--bglow);background:transparent;padding:.6rem 1.4rem;border-radius:2px;cursor:none;text-decoration:none;letter-spacing:.04em;transition:background .2s,color .2s,box-shadow .2s}
+.nav-cta:hover{background:var(--gold);color:var(--ink);box-shadow:0 0 28px rgba(184,154,82,.35)}
+
+/* ── HERO ────────────────────────────────── */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:0 3.5rem;overflow:hidden}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.7}
+.hero-content{position:relative;z-index:2;max-width:900px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero-label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.2em;color:var(--gold);margin-bottom:2.5rem;opacity:0;transform:translateY(12px);animation:up .8s var(--ease) .4s forwards}
+.hero-headline{font-family:var(--ff-d);font-size:clamp(1.9rem,3.2vw,3.6rem);font-weight:700;line-height:1.12;letter-spacing:-.02em;opacity:0;transform:translateY(24px);animation:up 1.1s var(--ease) .55s forwards}
+.hero-headline em{font-style:italic;font-weight:300;color:var(--gold-s);opacity:.9;font-weight:600}
+.hero-sub{max-width:44ch;font-size:.95rem;font-weight:400;line-height:1.82;color:var(--muted);text-align:center;margin-top:2rem;opacity:0;transform:translateY(16px);animation:up .9s var(--ease) .85s forwards}
+.hero-cta-row{display:flex;align-items:center;gap:2rem;margin-top:3rem;opacity:0;transform:translateY(16px);animation:up .9s var(--ease) 1s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--ff-b);font-size:.84rem;font-weight:500;letter-spacing:.04em;color:var(--ink);background:var(--gold);padding:.85rem 2rem;border-radius:2px;border:none;cursor:none;text-decoration:none;transition:background .2s,box-shadow .2s,transform .2s}
+.btn-primary:hover{background:var(--gold-l);box-shadow:0 0 40px rgba(184,154,82,.45);transform:translateY(-2px)}
+.btn-ghost{font-size:.82rem;font-weight:300;letter-spacing:.06em;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:.15rem;transition:color .2s,border-color .2s;cursor:none}
+.btn-ghost:hover{color:var(--text);border-color:var(--muted)}
+.hero-scroll{position:absolute;bottom:2.5rem;right:3.5rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;opacity:0;animation:up .8s var(--ease) 1.4s forwards}
+.hero-scroll span{font-size:.62rem;letter-spacing:.18em;color:var(--dim);writing-mode:vertical-lr;text-transform:lowercase}
+.scroll-bar{width:1px;height:2.5rem;background:linear-gradient(to bottom,var(--gold),transparent);animation:pulse 2s ease-in-out infinite}
+
+/* hero orbs */
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
+.orb-a{width:500px;height:500px;background:radial-gradient(circle,rgba(30,80,160,.14) 0%,transparent 70%);top:-5%;left:-10%;animation:drift1 18s ease-in-out infinite}
+.orb-b{width:350px;height:350px;background:radial-gradient(circle,rgba(196,165,90,.07) 0%,transparent 70%);bottom:10%;right:5%;animation:drift2 22s ease-in-out infinite}
+
+/* ── MARQUEE ─────────────────────────────── */
+.mq-wrap{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.9rem 0;overflow:hidden;position:relative;z-index:2;background:rgba(184,154,82,.03)}
+.mq-track{display:flex;gap:4rem;white-space:nowrap;animation:mq 40s linear infinite;width:max-content}
+.mq-item{font-family:var(--ff-d);font-size:.82rem;font-style:normal;font-weight:600;letter-spacing:.12em;color:var(--dim)}
+.mq-dot{color:var(--gold);font-size:.5rem;align-self:center}
+
+/* ── GLOBAL SECTION ─────────────────────── */
+section{position:relative;z-index:2}
+.inner{max-width:1240px;margin:0 auto;padding:0 3.5rem}
+
+/* ── INTRO ───────────────────────────────── */
+#intro{padding:9rem 0}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+.intro-pull{font-family:var(--ff-d);font-size:clamp(1.5rem,2.5vw,2.4rem);font-weight:700;font-style:normal;line-height:1.3;letter-spacing:-.02em;color:var(--text)}
+.intro-pull::before{content:'\201C';font-size:2.5rem;line-height:0;vertical-align:-.35rem;margin-right:.15rem;color:var(--gold);opacity:.65}
+.intro-body{padding-top:.5rem}
+.intro-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:1.5rem}
+.intro-body p{font-size:.95rem;line-height:1.82;color:var(--muted);margin-bottom:1.2rem;font-weight:400}
+.intro-body p:last-child{margin-bottom:0}
+
+/* ── PHILOSOPHY ──────────────────────────── */
+#philosophy{padding:8rem 0;background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.phil-inner{max-width:900px;margin:0 auto;padding:0 3.5rem;text-align:center}
+.phil-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:2.5rem}
+.phil-statement{font-family:var(--ff-d);font-size:clamp(1.4rem,2.5vw,2.5rem);font-weight:600;line-height:1.4;letter-spacing:-.01em;color:var(--text)}
+.phil-rule{width:40px;height:1px;background:var(--gold);margin:2.5rem auto 0;opacity:.6}
+
+/* ── WHO WE SERVE ────────────────────────── */
+#who{padding:9rem 0}
+.who-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+.who-label-col{position:sticky;top:8rem}
+.who-label-col .who-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:1.5rem}
+.who-label-col h2{font-family:var(--ff-d);font-size:clamp(1.6rem,2.5vw,2.5rem);font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.who-list{display:flex;flex-direction:column}
+.who-item{display:grid;grid-template-columns:3rem 1fr;gap:1.5rem;align-items:start;padding:2rem 0;border-bottom:1px solid var(--border);transition:background .2s}
+.who-item:first-child{border-top:1px solid var(--border)}
+.who-num{font-family:var(--ff-d);font-size:.85rem;font-style:italic;color:var(--gold);padding-top:.15rem}
+.who-name{font-family:var(--ff-d);font-size:1.25rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.5rem}
+.who-desc{font-size:.85rem;line-height:1.75;color:var(--muted)}
+
+/* ── APPROACH ────────────────────────────── */
+#approach{padding:8rem 0;background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.appr-header{margin-bottom:5rem}
+.appr-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:1.25rem}
+.appr-title{font-family:var(--ff-d);font-size:clamp(1.6rem,2.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-.01em}
+.appr-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.appr-steps::before{content:'';position:absolute;top:1.2rem;left:0;right:0;height:1px;background:linear-gradient(to right,rgba(196,165,90,.55),var(--border) 22%,var(--gold-s) 50%,var(--border) 78%,transparent)}
+.appr-step{padding:4rem 2.5rem 0 0;position:relative}
+.appr-step::before{content:'';position:absolute;top:calc(1.2rem - 4.5px);left:0;width:10px;height:10px;border-radius:50%;background:var(--ink2);border:1px solid var(--gold);box-shadow:0 0 10px rgba(184,154,82,.5);z-index:1}
+.appr-step-n{font-family:var(--ff-d);font-size:.8rem;font-style:italic;color:var(--gold);margin-bottom:1.25rem;position:relative}
+.appr-step-name{font-family:var(--ff-d);font-size:1.15rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.75rem}
+.appr-step-desc{font-size:.84rem;line-height:1.75;color:var(--muted)}
+
+/* ── SERVICES ────────────────────────────── */
+#services{padding:9rem 0}
+.svc-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem}
+.svc-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:1.25rem}
+.svc-title{font-family:var(--ff-d);font-size:clamp(1.6rem,2.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-.01em}
+.svc-intro{font-size:.95rem;line-height:1.85;color:var(--muted);align-self:end}
+.svc-list{display:flex;flex-direction:column}
+.svc-row{display:grid;grid-template-columns:3.5rem 1fr 2fr;gap:2rem;align-items:start;padding:2.25rem 0;border-bottom:1px solid var(--border);cursor:none;transition:background .25s}
+.svc-row:first-child{border-top:1px solid var(--border)}
+.svc-row:hover .svc-row-name{color:var(--gold-l)}
+.svc-row-n{font-family:var(--ff-d);font-size:.8rem;font-style:italic;color:var(--gold);padding-top:.2rem}
+.svc-row-name{font-family:var(--ff-d);font-size:1.2rem;font-weight:700;letter-spacing:-.02em;transition:color .25s}
+.svc-row-desc{font-size:.84rem;line-height:1.75;color:var(--muted)}
+
+/* ── STORY ───────────────────────────────── */
+#story{padding:10rem 0;background:var(--ink);overflow:hidden;position:relative}
+.story-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(30,80,160,.1) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(60px);pointer-events:none}
+.story-inner{max-width:1240px;margin:0 auto;padding:0 3.5rem}
+.story-eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:4rem}
+.story-headline{font-family:var(--ff-d);font-size:clamp(2rem,4vw,4.5rem);font-weight:800;line-height:1.05;letter-spacing:-.025em;margin-bottom:7rem;max-width:none}
+.story-lines{display:flex;flex-direction:column;gap:0}
+.story-line{font-family:var(--ff-d);font-size:clamp(1.2rem,2.6vw,2.8rem);font-weight:600;font-style:normal;line-height:1.15;letter-spacing:-.01em;color:var(--text);opacity:.18;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease);padding:1.2rem 0;border-bottom:1px solid rgba(237,232,223,.05)}
+.story-line:last-child{border-bottom:none}
+.story-line.lit{opacity:1;transform:translateY(0)}
+.story-line.lit.hl{color:var(--gold-s)}
+.story-line--r{text-align:right}
+.story-line--c{padding-left:8vw}
+.story-line--c2{padding-left:14vw}
+
+/* ── WHY ─────────────────────────────────── */
+#why{padding:9rem 0;background:var(--ink2);border-top:1px solid var(--border)}
+.why-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:6rem;align-items:start}
+.why-sticky{position:sticky;top:8rem}
+.why-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:1.5rem}
+.why-title{font-family:var(--ff-d);font-size:clamp(1.5rem,2.5vw,2.5rem);font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:1.5rem}
+.why-sub{font-size:.9rem;line-height:1.8;color:var(--muted)}
+.why-cards{display:flex;flex-direction:column;gap:1px;background:var(--border)}
+.why-card{background:var(--ink2);padding:2.25rem;transition:background .25s}
+.why-card:hover{background:var(--ink3)}
+.why-card-title{font-family:var(--ff-d);font-size:1.05rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.75rem}
+.why-card-body{font-size:.84rem;line-height:1.75;color:var(--muted)}
+
+/* ── ABOUT ───────────────────────────────── */
+#about{padding:9rem 0;border-top:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.about-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:1.5rem}
+.about-title{font-family:var(--ff-d);font-size:clamp(1.5rem,2.5vw,2.5rem);font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:1.75rem}
+.about-body{font-size:.95rem;line-height:1.85;color:var(--muted)}
+.about-body p{margin-bottom:1.1rem}
+.about-body p:last-child{margin-bottom:0}
+.about-visual{position:relative}
+.about-frame{border:1px solid var(--border);border-radius:2px;aspect-ratio:4/5;background:var(--ink2);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
+.about-frame-text{font-family:var(--ff-d);font-size:5rem;font-weight:800;font-style:normal;color:rgba(184,154,82,.1);letter-spacing:-.02em}
+.about-frame::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(184,154,82,.04) 0%,transparent 60%)}
+.about-tag{position:absolute;bottom:-1rem;right:-1rem;background:var(--ink);border:1px solid var(--border);padding:1rem 1.5rem;font-size:.78rem;color:var(--muted)}
+.about-tag strong{display:block;font-family:var(--ff-d);font-size:1.1rem;font-weight:400;color:var(--text);letter-spacing:-.01em;margin-bottom:.2rem}
+
+/* ── CLOSING CTA ─────────────────────────── */
+#closing{padding:10rem 0;text-align:center;position:relative;overflow:hidden;border-top:1px solid var(--border)}
+.closing-glow{position:absolute;width:800px;height:400px;border-radius:50%;background:radial-gradient(ellipse,rgba(196,165,90,.1) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(40px);pointer-events:none}
+.closing-inner{position:relative;z-index:2}
+.closing-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:2.5rem}
+.closing-title{font-family:var(--ff-d);font-size:clamp(2rem,4vw,4.5rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;max-width:18ch;margin:0 auto 3.5rem}
+.closing-title em{font-style:italic;color:var(--gold-s);opacity:.9}
+
+/* ── CONTACT ─────────────────────────────── */
+#contact{padding:9rem 0;background:var(--ink2);border-top:1px solid var(--border)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start}
+.contact-label{font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--gold);margin-bottom:1.5rem}
+.contact-title{font-family:var(--ff-d);font-size:clamp(1.4rem,2.2vw,2.2rem);font-weight:700;line-height:1.2;letter-spacing:-.01em;margin-bottom:1.5rem}
+.contact-body{font-size:.9rem;line-height:1.8;color:var(--muted);margin-bottom:2.5rem}
+.contact-details{display:flex;flex-direction:column;gap:.85rem}
+.contact-detail{font-size:.84rem;color:var(--muted);display:flex;gap:1rem;align-items:baseline}
+.contact-detail strong{font-weight:500;color:var(--text);min-width:4rem}
+.contact-form{display:flex;flex-direction:column;gap:1.25rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.form-group{display:flex;flex-direction:column;gap:.5rem}
+.form-group label{font-size:.72rem;font-weight:500;letter-spacing:.1em;color:var(--muted)}
+.form-group input,.form-group select,.form-group textarea{background:rgba(237,232,223,.04);border:1px solid var(--border);border-radius:2px;padding:.85rem 1rem;font-family:var(--ff-b);font-size:.88rem;color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s;resize:vertical}
+.form-group textarea{min-height:120px}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--dim)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--bglow);box-shadow:0 0 20px rgba(184,154,82,.1)}
+.form-group select{cursor:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23b89a52' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:calc(100% - 1rem) center;background-color:rgba(237,232,223,.04)}
+.form-group select option{background:var(--ink2);color:var(--text)}
+.form-submit{margin-top:.5rem}
+.form-note{font-size:.72rem;color:var(--dim);margin-top:.75rem;line-height:1.6}
+
+/* ── FOOTER ──────────────────────────────── */
+.footer-logo{display:flex;align-items:center;gap:.75rem}
+.footer-wordmark{font-family:var(--ff-d);font-size:.85rem;font-weight:800;letter-spacing:.08em;color:var(--text)}
+.footer-tagline{font-size:.75rem;color:var(--dim);max-width:36ch;line-height:1.6;font-style:italic;font-family:var(--ff-d)}
+.footer-links{display:flex;gap:2rem;list-style:none}
+.footer-links a{font-size:.75rem;color:var(--dim);text-decoration:none;letter-spacing:.05em;transition:color .2s}
+.footer-links a:hover{color:var(--muted)}
+.footer-copy{font-size:.72rem;color:var(--dim)}
+
+/* ── REVEAL ──────────────────────────────── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .95s var(--ease),transform .95s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ── KEYFRAMES ───────────────────────────── */
+@keyframes up{to{opacity:1;transform:translateY(0)}}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-40px)}}
+@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,30px)}}
+
+/* ── RESPONSIVE ──────────────────────────── */
+@media(max-width:1360px){
+  nav{padding:1.25rem 2rem}
+  .nav-links{gap:1.35rem}
+  .nav-logo-img{height:32px}
+  .nav-cta{padding:.55rem 1rem}
+}
+@media(max-width:1180px){
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:.72rem;letter-spacing:.03em}
+  .nav-cta{font-size:.72rem}
+}
+@media(max-width:1000px){
+  nav{padding:1.2rem 1.5rem}
+  .nav-links{display:none}
+  #hero{padding:0 1.5rem 5rem}
+  .inner{padding:0 1.5rem}
+  .intro-grid,.who-grid,.about-grid,.contact-grid,.why-grid{grid-template-columns:1fr;gap:3rem}
+  .who-label-col{position:static}
+  .appr-steps{grid-template-columns:1fr 1fr}
+  .appr-steps::before{display:none}
+  .svc-header{grid-template-columns:1fr}
+  .svc-row{grid-template-columns:2.5rem 1fr;grid-template-rows:auto auto}
+  .svc-row-desc{grid-column:2}
+  .story-inner,.phil-inner{padding:0 1.5rem}
+  .story-headline{font-size:clamp(1.55rem,6.9vw,4.2rem)}
+  .story-line{font-size:clamp(1.4rem,6vw,2.8rem)}
+  #closing{padding:7rem 1.5rem}
+  body{cursor:auto}
+  #cur,#cur-r{display:none}
+  .form-row{grid-template-columns:1fr}
+}
+
+/* ── TEAM ────────────────────────────────── */
+#team{padding:9rem 0;border-top:1px solid var(--border)}
+.team-header{margin-bottom:4rem}
+.team-label{font-size:.7rem;font-weight:600;letter-spacing:.18em;color:var(--gold);margin-bottom:1.25rem}
+.team-title{font-family:var(--ff-d);font-size:clamp(1.6rem,2.5vw,2.8rem);font-weight:700;line-height:1.15;letter-spacing:-.02em}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.team-card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:2.5rem 2rem;border:1px solid var(--border);border-radius:4px;background:var(--ink2);transition:border-color .3s,background .3s,transform .3s var(--ease)}
+.team-card:hover{border-color:var(--bglow);background:var(--ink3);transform:translateY(-4px)}
+.team-photo{width:110px;height:110px;border-radius:50%;background:var(--ink3);border:2px solid var(--border);margin-bottom:1.75rem;overflow:hidden;position:relative;flex-shrink:0;transition:border-color .3s}
+.team-card:hover .team-photo{border-color:var(--gold)}
+.team-photo svg{width:100%;height:100%}
+.team-name{font-family:var(--ff-d);font-size:1.15rem;font-weight:700;letter-spacing:-.02em;margin-bottom:.3rem;color:var(--text)}
+.team-role{font-size:.75rem;font-weight:600;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem}
+.team-desc{font-size:.84rem;line-height:1.72;color:var(--muted);margin-bottom:1.5rem;flex:1}
+.team-linkedin{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);color:var(--muted);text-decoration:none;cursor:none;transition:border-color .2s,color .2s,background .2s,box-shadow .2s}
+.team-linkedin:hover{border-color:var(--bglow);color:var(--gold-l);background:rgba(196,165,90,.08);box-shadow:0 0 16px rgba(196,165,90,.2)}
+
+/* ── FOOTER SOCIAL ───────────────────────── */
+.footer-social{display:flex;align-items:center;gap:.65rem}
+.soc-icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);color:var(--dim);text-decoration:none;cursor:none;transition:border-color .2s,color .2s,background .2s,box-shadow .2s}
+.soc-icon:hover{border-color:var(--bglow);color:var(--gold-l);background:rgba(196,165,90,.08);box-shadow:0 0 14px rgba(196,165,90,.18)}
+
+@media(max-width:1000px){
+  .team-grid{grid-template-columns:1fr}
+  .hero-content{padding:0}
+  footer [style*="grid-template-columns:1.4fr"]{grid-template-columns:1fr 1fr!important;gap:2.5rem!important;}
+}
+
+
+/* ── METRICS STATS ───────────────────────── */
+#stats{padding:5rem 0;background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:flex;align-items:stretch;justify-content:space-evenly}
+.stat-div{flex:0 0 1px;width:1px;margin:1.25rem 0;background:linear-gradient(to bottom,transparent,var(--border),var(--gold),var(--border),transparent)}
+.stat-item{flex:0 0 auto;padding:3rem 0;text-align:center;position:relative}
+.stat-num{font-family:var(--ff-d);font-size:clamp(2.6rem,4.2vw,4.6rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--text);margin-bottom:.75rem;background:linear-gradient(135deg,var(--text) 40%,var(--gold-s) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:.82rem;font-weight:500;letter-spacing:.06em;color:var(--muted);line-height:1.5}
+
+/* ── FOOTER FULL REBUILD ─────────────────── */
+footer{display:block;background:var(--ink);width:100%;border-top:1px solid var(--border);position:relative;z-index:2}
+.footer-main{max-width:1560px;margin:0 auto;padding:4.5rem 4rem 3.5rem}
+.footer-grid{display:grid;grid-template-columns:auto auto 1fr;column-gap:4rem;row-gap:2.5rem;align-items:start}
+.footer-col-brand{}
+.footer-brand-logo{margin-bottom:1.5rem}
+.footer-brand-logo img{height:46px;width:auto;display:block}
+.footer-col-mid{justify-self:start;margin-left:8rem}
+.footer-col-right{justify-self:end}
+.footer-tagline-text{font-size:.86rem;font-weight:400;line-height:1.72;color:var(--dim);max-width:40ch;font-style:italic;font-family:var(--ff-d)}
+.footer-socials{display:flex;flex-wrap:nowrap;gap:.65rem;margin-top:1.5rem}
+.footer-socials .soc-icon{flex:0 0 36px}
+.footer-col-head{font-size:.65rem;font-weight:700;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:1.4rem}
+.footer-col-links{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.footer-col-links a{font-size:.8rem;color:var(--dim);text-decoration:none;font-weight:400;transition:color .2s}
+.footer-col-links a:hover{color:var(--text)}
+.footer-bottom{border-top:1px solid var(--border);background:var(--ink)}
+.footer-bottom-inner{max-width:1560px;margin:0 auto;padding:1.5rem 4rem;text-align:center}
+.footer-bottom-row{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.footer-copy{font-size:.72rem;color:var(--dim);font-weight:400}
+.finra-badge{display:inline-flex;align-items:center;gap:.8rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:.7rem 1.25rem;margin-bottom:1.4rem;text-decoration:none;transition:border-color .2s,background .2s;cursor:none}
+.finra-badge:hover{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.07)}
+.finra-badge-mark{display:flex;align-items:center;gap:.4rem}
+.finra-badge-text{font-size:.78rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.04em;line-height:1.3}
+.finra-badge-text strong{display:block;font-size:.88rem;color:rgba(255,255,255,.75);letter-spacing:.06em}
+.footer-disclaimer{font-size:.67rem;color:rgba(220,228,255,.18);line-height:1.65;max-width:520px}
+
+@media(max-width:1240px){
+  .footer-grid{grid-template-columns:auto 1fr}
+  .footer-col-mid{margin-left:4rem}
+  .footer-col-right{grid-column:1/-1;justify-self:start}
+}
+@media(max-width:1000px){
+  .stats-grid{flex-direction:column;align-items:stretch;gap:0}
+  .stat-div{display:none}
+  .stat-item{padding:2.5rem 1.5rem;border-bottom:1px solid var(--border)}
+  .footer-grid{grid-template-columns:1fr;gap:2.5rem}
+  .footer-col-mid,.footer-col-right{justify-self:start;margin-left:0}
+  .footer-main{padding:3rem 1.5rem 2rem}
+  .footer-bottom-inner{padding:1.5rem}
+  .footer-disclaimer{max-width:none}
+}
+
+</style>
+</head>
+<body>
+<div id="noise"></div>
+<div id="cur"></div>
+<div id="cur-r"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <img class="nav-logo-img" src="data:image/png;base64,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" alt="Avencrest Wealth Management">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#who">Who We Serve</a></li>
+    <li><a href="#approach">Our Approach</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Avencrest</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#team">Our Team</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Schedule a Conversation</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="hero-content">
+    <span class="hero-label">Wealth Management</span>
+    <h1 class="hero-headline">
+      Your Wealth Is More Than<br>
+      What You've Built.<br>
+      <em>It's What Makes Everything<br>Else Possible.</em>
+    </h1>
+    <p class="hero-sub">Behind every financial decision is a life filled with ambition, responsibility, and possibility.</p>
+    <div class="hero-cta-row">
+      <a href="#contact" class="btn-primary">Let's Talk About Your Future</a>
+      <a href="#intro" class="btn-ghost">Discover our approach</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq-track">
+    <span class="mq-item">Financial Planning</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Investment Management</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Estate & Legacy Planning</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Philanthropic Advisory</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Tax Strategy</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Family Governance</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Financial Planning</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Investment Management</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Estate & Legacy Planning</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Philanthropic Advisory</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Tax Strategy</span><span class="mq-dot">✦</span>
+    <span class="mq-item">Family Governance</span><span class="mq-dot">✦</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section id="intro">
+  <div class="inner">
+    <div class="intro-grid">
+      <p class="intro-pull reveal">Behind every financial decision is something deeply personal.</p>
+      <div class="intro-body reveal d2">
+        <p class="intro-label">The Human Side of Wealth</p>
+        <p>Wealth is rarely just numbers. It carries intention — the life you've built, the people you're responsible for, the future you're trying to protect. Managing it well means understanding those things first.</p>
+        <p>At Avencrest, we begin by listening. We want to understand what you've worked toward, what keeps you up at night, and what you hope to make possible. Only then do we build a plan worth following.</p>
+        <p>That's the difference between financial services and wealth management done right: one manages assets, the other manages the meaning behind them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS -->
+<section id="stats">
+  <div class="inner">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num">$250M+</div>
+        <div class="stat-label">Assets Under Management</div>
+      </div>
+      <div class="stat-div" aria-hidden="true"></div>
+      <div class="stat-item reveal d2">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years of Industry Experience</div>
+      </div>
+      <div class="stat-div" aria-hidden="true"></div>
+      <div class="stat-item reveal d3">
+        <div class="stat-num">150+</div>
+        <div class="stat-label">Families &amp; Institutions Served</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="phil-inner">
+    <p class="phil-label reveal">Our Philosophy</p>
+    <p class="phil-statement reveal d2">We believe wealth management is less about managing money and more about enabling the life you've worked toward — for yourself, your family, and the generations that follow.</p>
+    <div class="phil-rule reveal d3"></div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section id="who">
+  <div class="inner">
+    <div class="who-grid">
+      <div class="who-label-col reveal">
+        <p class="who-label">Who We Serve</p>
+        <h2>The people behind<br>meaningful wealth.</h2>
+      </div>
+      <div class="who-list">
+        <div class="who-item reveal">
+          <span class="who-num">i.</span>
+          <div>
+            <div class="who-name">High-Net-Worth Individuals</div>
+            <div class="who-desc">Executives, professionals, and entrepreneurs who have accumulated significant wealth and need a disciplined, holistic approach to protecting and growing it.</div>
+          </div>
+        </div>
+        <div class="who-item reveal d1">
+          <span class="who-num">ii.</span>
+          <div>
+            <div class="who-name">Families & Multi-Generational Wealth</div>
+            <div class="who-desc">Families navigating the complexity of wealth across generations — estate planning, family governance, and legacy that outlasts the founder.</div>
+          </div>
+        </div>
+        <div class="who-item reveal d2">
+          <span class="who-num">iii.</span>
+          <div>
+            <div class="who-name">Business Owners & Entrepreneurs</div>
+            <div class="who-desc">Founders and owners whose personal and business finances are deeply intertwined — at every stage, from growth to transition and exit.</div>
+          </div>
+        </div>
+        <div class="who-item reveal d3">
+          <span class="who-num">iv.</span>
+          <div>
+            <div class="who-name">Institutions & Foundations</div>
+            <div class="who-desc">Endowments, foundations, and institutional investors who need disciplined stewardship aligned with mission, governance, and long-term objectives.</div>
+          </div>
+        </div>
+        <div class="who-item reveal d4">
+          <span class="who-num">v.</span>
+          <div>
+            <div class="who-name">Professionals & Senior Executives</div>
+            <div class="who-desc">C-suite leaders and senior professionals managing complex compensation structures, concentrated positions, and the wealth that accumulates from a high-performing career.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="inner">
+    <div class="appr-header">
+      <p class="appr-label reveal">Our Approach</p>
+      <h2 class="appr-title reveal d1">Structured for clarity.<br>Built around your life.</h2>
+    </div>
+    <div class="appr-steps">
+      <div class="appr-step reveal">
+        <p class="appr-step-n">Understand</p>
+        <h3 class="appr-step-name">Deep Discovery</h3>
+        <p class="appr-step-desc">We take the time to understand your financial picture in full — not just the numbers, but the goals, concerns, and responsibilities behind them.</p>
+      </div>
+      <div class="appr-step reveal d1">
+        <p class="appr-step-n">Design</p>
+        <h3 class="appr-step-name">Tailored Strategy</h3>
+        <p class="appr-step-desc">We build a wealth plan that reflects your actual life — not a template. Every recommendation connects to something that matters to you.</p>
+      </div>
+      <div class="appr-step reveal d2">
+        <p class="appr-step-n">Implement</p>
+        <h3 class="appr-step-name">Deliberate Execution</h3>
+        <p class="appr-step-desc">We act with care and precision, coordinating across investment, tax, estate, and planning disciplines to bring the strategy to life.</p>
+      </div>
+      <div class="appr-step reveal d3">
+        <p class="appr-step-n">Evolve</p>
+        <h3 class="appr-step-name">Ongoing Partnership</h3>
+        <p class="appr-step-desc">Life changes. Your wealth plan should too. We monitor, adapt, and stay ahead of what's next — so you don't have to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="inner">
+    <div class="svc-header">
+      <div>
+        <p class="svc-label reveal">Wealth Management</p>
+        <h2 class="svc-title reveal d1">What we build<br>together.</h2>
+      </div>
+      <p class="svc-intro reveal d2">Each discipline we practice connects to a single purpose: giving you clarity, confidence, and control over the wealth you've built — and what it can become.</p>
+    </div>
+    <div class="svc-list reveal">
+      <div class="svc-row">
+        <span class="svc-row-n">01</span>
+        <div class="svc-row-name">Financial Planning</div>
+        <div class="svc-row-desc">Comprehensive planning that connects your financial resources to your life priorities — now and decades from now. Built to evolve as you do.</div>
+      </div>
+      <div class="svc-row">
+        <span class="svc-row-n">02</span>
+        <div class="svc-row-name">Investment Management</div>
+        <div class="svc-row-desc">Disciplined portfolio construction calibrated to your goals, risk tolerance, and time horizon. Institutional-quality management, personally delivered.</div>
+      </div>
+      <div class="svc-row">
+        <span class="svc-row-n">03</span>
+        <div class="svc-row-name">Estate & Legacy Planning</div>
+        <div class="svc-row-desc">Ensuring your wealth transfers according to your wishes — to the people you love and the causes you believe in — with minimum friction and maximum impact.</div>
+      </div>
+      <div class="svc-row">
+        <span class="svc-row-n">04</span>
+        <div class="svc-row-name">Tax Strategy</div>
+        <div class="svc-row-desc">Intelligent, proactive tax planning integrated across your entire financial picture — not handled in isolation at year-end. Coordinated, not reactive.</div>
+      </div>
+      <div class="svc-row">
+        <span class="svc-row-n">05</span>
+        <div class="svc-row-name">Family Wealth Governance</div>
+        <div class="svc-row-desc">Structures, conversations, and frameworks that help families navigate wealth together — across generations, across differences, with shared purpose.</div>
+      </div>
+      <div class="svc-row">
+        <span class="svc-row-n">06</span>
+        <div class="svc-row-name">Philanthropic Planning</div>
+        <div class="svc-row-desc">Aligning your giving with your values — whether through donor-advised funds, foundations, or strategic charitable strategies built into your broader plan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="story-glow"></div>
+  <div class="story-inner">
+    <p class="story-eyebrow reveal">A Different Kind of Legacy</p>
+    <h2 class="story-headline reveal d1">Someday, Your Wealth<br>Will Tell a Story.</h2>
+    <div class="story-lines">
+      <p class="story-line" data-order="0">Not simply of what you earned.</p>
+      <p class="story-line story-line--c" data-order="1">But of the opportunities you created.</p>
+      <p class="story-line story-line--c2" data-order="2">The people you supported.</p>
+      <p class="story-line story-line--c hl" data-order="3">The decisions you made when they mattered most.</p>
+      <p class="story-line" data-order="4">And the future you helped make possible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="inner">
+    <div class="why-grid">
+      <div class="why-sticky reveal">
+        <p class="why-label">Why Avencrest</p>
+        <h2 class="why-title">A different kind of wealth management firm.</h2>
+        <p class="why-sub">We operate as fiduciaries — always. We offer institutional rigor with the attentiveness of a boutique. And we measure success by how well your wealth serves your life.</p>
+      </div>
+      <div class="why-cards reveal d2">
+        <div class="why-card">
+          <div class="why-card-title">Fiduciary, Always</div>
+          <div class="why-card-body">We are legally and ethically obligated to act in your best interest — full stop. No product commissions, no conflicts. Just advice that's built for you.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-title">Deeply Personalized</div>
+          <div class="why-card-body">No two clients are alike, and we don't treat them that way. Every relationship begins with genuine understanding before a single recommendation is made.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-title">Long-Term Perspective</div>
+          <div class="why-card-body">We measure success in decades, not quarters. Our advice is designed to serve the full arc of your financial life — not just today's priorities.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-title">Integrated Across Disciplines</div>
+          <div class="why-card-body">Investment, tax, estate, and planning don't exist in silos here. We coordinate every dimension of your wealth under one coherent strategy.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-card-title">Accessible &amp; Transparent</div>
+          <div class="why-card-body">You'll always know what we're doing and why. Clear fees, honest conversations, and access to your advisors when it matters — not just at annual reviews.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="about-label">About Avencrest</p>
+        <h2 class="about-title">Built on trust.<br>Grounded in responsibility.</h2>
+        <div class="about-body">
+          <p>Avencrest was founded on a single conviction: that the people who have worked hardest to build their wealth deserve advice that truly serves them — not the firm, not the product shelf, not a quarterly quota.</p>
+          <p>We are an independent, fee-only wealth management firm working with individuals, families, and institutions across the full spectrum of their financial lives. Our advisors bring experience from institutional investment management, tax planning, estate law, and family governance.</p>
+          <p>What distinguishes us isn't our credentials — it's the relationships we build. We are long-term partners who understand the weight of the decisions you face, and we show up with the discipline, honesty, and care those decisions deserve.</p>
+        </div>
+      </div>
+      <div class="about-visual reveal d2">
+        <div class="about-frame">
+          <span class="about-frame-text">A</span>
+        </div>
+        <div class="about-tag">
+          <strong>Independent & Fee-Only</strong>
+          Fiduciary advice, always in your interest
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TEAM -->
+<section id="team">
+  <div class="inner">
+    <div class="team-header">
+      <p class="team-label reveal">Our Team</p>
+      <h2 class="team-title reveal d1">The people behind<br>every decision.</h2>
+    </div>
+    <div class="team-grid">
+
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="110" height="110" fill="#132a52"/>
+            <circle cx="55" cy="42" r="20" fill="#1a3660"/>
+            <ellipse cx="55" cy="90" rx="30" ry="22" fill="#1a3660"/>
+          </svg>
+        </div>
+        <div class="team-name">James Whitfield</div>
+        <div class="team-role">Managing Partner &amp; CIO</div>
+        <p class="team-desc">Twenty years guiding high-net-worth families through complex wealth decisions with discipline, long-term perspective, and a genuine commitment to their outcomes.</p>
+        <a href="#" class="team-linkedin" aria-label="LinkedIn — James Whitfield">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+
+      <div class="team-card reveal d2">
+        <div class="team-photo">
+          <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="110" height="110" fill="#132a52"/>
+            <circle cx="55" cy="42" r="20" fill="#1a3660"/>
+            <ellipse cx="55" cy="90" rx="30" ry="22" fill="#1a3660"/>
+          </svg>
+        </div>
+        <div class="team-name">Sarah Chen</div>
+        <div class="team-role">Senior Wealth Advisor</div>
+        <p class="team-desc">Specializes in estate planning and family governance, helping multi-generational families build structures that protect wealth, reduce conflict, and endure.</p>
+        <a href="#" class="team-linkedin" aria-label="LinkedIn — Sarah Chen">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+
+      <div class="team-card reveal d3">
+        <div class="team-photo">
+          <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="110" height="110" fill="#132a52"/>
+            <circle cx="55" cy="42" r="20" fill="#1a3660"/>
+            <ellipse cx="55" cy="90" rx="30" ry="22" fill="#1a3660"/>
+          </svg>
+        </div>
+        <div class="team-name">Marcus Okonkwo</div>
+        <div class="team-role">Director of Financial Planning</div>
+        <p class="team-desc">Brings institutional investment experience to every engagement, translating complex strategies into clear, actionable financial plans tailored to each client's life.</p>
+        <a href="#" class="team-linkedin" aria-label="LinkedIn — Marcus Okonkwo">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING CTA -->
+<section id="closing">
+  <div class="closing-glow"></div>
+  <div class="closing-inner inner">
+    <p class="closing-label reveal">Begin the Conversation</p>
+    <h2 class="closing-title reveal d1">You've Built<br>Something Meaningful.<br><em>Let's Talk About<br>What Comes Next.</em></h2>
+    <a href="#contact" class="btn-primary reveal d2">Schedule a Conversation</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-label">Contact Avencrest</p>
+        <h2 class="contact-title">Every conversation begins with listening.</h2>
+        <p class="contact-body">Whether you're planning for the future, navigating a significant transition, or simply looking for a second opinion — we'd welcome the conversation. No obligation. No pressure.</p>
+        <div class="contact-details">
+          <div class="contact-detail"><strong>Office</strong> New York, NY</div>
+          <div class="contact-detail"><strong>Email</strong> hello@avencrest.com</div>
+          <div class="contact-detail"><strong>Hours</strong> Monday – Friday, 9am – 5pm ET</div>
+        </div>
+      </div>
+      <form class="contact-form reveal d2" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input id="fname" type="text" placeholder="James" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input id="lname" type="text" placeholder="Anderson" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" placeholder="james@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="tel" placeholder="+1 (212) 555-0100">
+        </div>
+        <div class="form-group">
+          <label for="interest">What brings you here?</label>
+          <select id="interest">
+            <option value="" disabled selected>Select an area of interest</option>
+            <option>Financial Planning</option>
+            <option>Investment Management</option>
+            <option>Estate & Legacy Planning</option>
+            <option>Tax Strategy</option>
+            <option>Family Wealth Governance</option>
+            <option>Philanthropic Planning</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Tell us a little about your situation and what you're looking for..."></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Send Message</button>
+          <p class="form-note">Your information is kept strictly confidential and will never be shared. We'll respond within one business day.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-grid">
+
+      <!-- Brand col -->
+      <div class="footer-col-brand">
+        <div class="footer-brand-logo">
+          <img src="data:image/png;base64,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" alt="Avencrest Wealth Management">
+        </div>
+        <p class="footer-tagline-text">We work with individuals, families, and institutions to manage wealth and plan for the future.</p>
+        <div class="footer-socials">
+          <a href="#" class="soc-icon" aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="soc-icon" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="soc-icon" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="soc-icon" aria-label="X (Twitter)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Company sitemap (middle) -->
+      <div class="footer-col-mid">
+        <p class="footer-col-head">Company</p>
+        <ul class="footer-col-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#philosophy">Our Philosophy</a></li>
+          <li><a href="#approach">Our Approach</a></li>
+          <li><a href="#team">Our Team</a></li>
+        </ul>
+      </div>
+
+      <!-- Disclaimer (right) -->
+      <div class="footer-col-right">
+        <a href="https://brokercheck.finra.org/" target="_blank" rel="noopener" class="finra-badge" aria-label="Check our background on FINRA BrokerCheck">
+          <svg width="30" height="30" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="10.5" stroke="#4a9e6b" stroke-width="1"/>
+            <path d="M6.5 11.5 L9.5 14.5 L15.5 8" stroke="#4a9e6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="finra-badge-text">
+            <strong>FINRA BrokerCheck</strong>
+            Check Our Background
+          </div>
+        </a>
+        <p class="footer-disclaimer">
+        Avencrest Wealth Management, LLC is a registered investment adviser. Registration does not imply a certain level of skill or training. The information on this website is for informational purposes only and does not constitute investment, tax, or legal advice. Investing involves risk, including possible loss of principal. Past performance is not indicative of future results. Please review our Form ADV for important disclosures. 
+        Check the background of your financial professional on <a href="https://brokercheck.finra.org/" target="_blank" rel="noopener" style="color:rgba(220,228,255,.32);text-decoration:underline">FINRA's BrokerCheck</a>.
+      </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer bottom bar -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span class="footer-copy">© 2026 Avencrest Wealth Management, LLC. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* ── CURSOR ─────────────────────────────── */
+const cur = document.getElementById('cur');
+const curR = document.getElementById('cur-r');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function tick(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(tick);})();
+
+/* ── NAV SCROLL ─────────────────────────── */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>80));
+
+/* ── REVEAL ─────────────────────────────── */
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+}),{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ── STORY LINE REVEAL ──────────────────── */
+const storyObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting) e.target.classList.add('lit');
+  else e.target.classList.remove('lit');
+}),{threshold:.6});
+document.querySelectorAll('.story-line').forEach(el=>storyObs.observe(el));
+
+/* ── CANVAS PARTICLES ───────────────────── */
+const canvas=document.getElementById('hero-canvas');
+const ctx=canvas.getContext('2d');
+let W,H,pts=[],mpos={x:-9e9,y:-9e9};
+function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
+class Pt{
+  constructor(init){
+    this.x=Math.random()*W;this.y=init?Math.random()*H:H+5;
+    this.r=Math.random()*.9+.2;this.vy=-(Math.random()*.3+.08);this.vx=(Math.random()-.5)*.1;
+    this.o=Math.random()*.35+.08;
+    const c=Math.random();
+    this.col=c>.55?'184,154,82':c>.25?'240,220,158':'237,232,223';
+  }
+  update(){
+    const dx=this.x-mpos.x,dy=this.y-mpos.y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<100){const f=(100-d)/100;this.x+=dx/d*f*1.2;this.y+=dy/d*f*1.2;}
+    this.x+=this.vx;this.y+=this.vy;
+    if(this.y<-5)Object.assign(this,new Pt(false));
+  }
+  draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(${this.col},${this.o})`;ctx.fill();}
+}
+function drawGrid(){
+  ctx.strokeStyle='rgba(184,154,82,.025)';ctx.lineWidth=.5;
+  for(let x=0;x<W;x+=80){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+  for(let y=0;y<H;y+=80){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+}
+function init(){pts=Array.from({length:120},()=>new Pt(true));}
+function frame(){
+  ctx.clearRect(0,0,W,H);drawGrid();
+  pts.forEach(p=>{p.update();p.draw();});
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<70){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(184,154,82,${(1-d/70)*.08})`;ctx.lineWidth=.5;ctx.stroke();}
+  }
+  requestAnimationFrame(frame);
+}
+document.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mpos.x=e.clientX-r.left;mpos.y=e.clientY-r.top;});
+window.addEventListener('resize',()=>{resize();init();});
+resize();init();frame();
+
+/* ── PARALLAX ORBS ──────────────────────── */
+window.addEventListener('scroll',()=>{
+  const s=window.scrollY;
+  document.querySelector('.orb-a').style.transform=`translateY(${s*.12}px)`;
+  document.querySelector('.orb-b').style.transform=`translateY(${-s*.08}px)`;
+});
+
+/* ── MAGNETIC BUTTONS ───────────────────── */
+document.querySelectorAll('.btn-primary,.nav-cta').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect(),bx=e.clientX-r.left-r.width/2,by=e.clientY-r.top-r.height/2;
+    btn.style.transform=`translate(${bx*.15}px,${by*.15}px)`;
+  });
+  btn.addEventListener('mouseleave',()=>btn.style.transform='');
+});
+
+/* ── FORM HANDLER ───────────────────────── */
+function handleForm(e){
+  e.preventDefault();
+  const btn=e.target.querySelector('button[type=submit]');
+  btn.textContent='Sending…';btn.style.opacity='.7';btn.style.pointerEvents='none';
+  setTimeout(()=>{
+    btn.textContent='Message Sent';btn.style.background='#2a6b4a';
+    e.target.reset();
+    setTimeout(()=>{btn.textContent='Send Message';btn.style.background='';btn.style.opacity='';btn.style.pointerEvents='';},3000);
+  },1200);
+}
+</script>
+</body>
+</html>
